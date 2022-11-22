@@ -1,0 +1,14 @@
+
+
+#logo {
+    align-items: flex-start;
+}
+
+ul > li {
+    display: inline-block;
+}
+
+.socials{
+    width: 30px;
+    height: 30px;
+}
