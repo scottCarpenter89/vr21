@@ -1,3 +1,22 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    
+    color: #FFF
+}
+
 ul > li {
     display: inline-block;
+}
+
+input {
+    background-color: #FFF;
+}
+
+main {
+    padding: 100px;
+    background-color: #417B5A;
+}
+
+footer {
+    background-color: #D0CEBA;
 }
