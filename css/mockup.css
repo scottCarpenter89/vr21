@@ -11,6 +11,7 @@ ul > li {
 label {
     margin: 5px;
 }
+
 input {
     background-color: #FFF;
 }
@@ -28,8 +29,4 @@ button {
 
 main {
     padding: 100px;
-}
-
-footer {
-    background-color: #D0CEBA;
 }
