@@ -21,10 +21,6 @@ div > label, input {
     margin: 5px;
 }
 
-label {
-    align-content: right;
-}
-
 button {
     background-color: #FFF;
     color: #000;
