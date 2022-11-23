@@ -6,23 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors Exercise</title>
     <style>
+        div {
+            margin: 1em;
+            padding: 0.5em;
+        }
+
         div:first-child {
             background-color: lightgray;
         }
     
-        div:first-child li {
+        div.foods li {
             font-style: italic;
         }
     
-        div:nth-child(even) {
+        div:nth-child(2) {
             background-color: black;
         }
     
-        div:nth-child(even) > ul,li {
+        div:nth-child(2) li, div:nth-child(2) ul {
             color: yellow;
         }
     
-        div:last-child {
+        div:nth-child(3) {
             background-color: lightblue;
         }
     
@@ -30,14 +35,14 @@
             background-color: maroon;
         }
     
-        div:last-child li {
+        div:last-child li, div:last-child ul {
             color: lightblue;
         }
     </style> 
 </head>
 
 <body>
-    <div>
+    <div class="foods">
         <ul>
             <caption>My 3 favorite cuisines:</caption>
             <li>BBQ</li>
