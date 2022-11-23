@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Exercise</title>
+    <style>
+        div:first-child {
+            background-color: lightgray;
+        }
+    
+        div:first-child li {
+            font-style: italic;
+        }
+    
+        div:nth-child(even) {
+            background-color: black;
+        }
+    
+        div:nth-child(even) > ul,li {
+            color: yellow;
+        }
+    
+        div:last-child {
+            background-color: lightblue;
+        }
+    
+        #binged-shows {
+            background-color: maroon;
+        }
+    
+        div:last-child li {
+            color: lightblue;
+        }
+    </style> 
+</head>
+
+<body>
+    <div>
+        <ul>
+            <caption>My 3 favorite cuisines:</caption>
+            <li>BBQ</li>
+            <li>Mexican</li>
+            <li>Japanese</li>
+        </ul>
+    </div>
+   
+    <div>
+        <ul>
+            <caption>My 3 favorite movies:</caption>
+            <li>Fight Club</li>
+            <li>1917</li>
+            <li>Inception</li>
+        </ul>
+    </div>
+
+    <div>
+        <div id="binged-shows">
+            <ul>
+                <caption>Last 3 binge-watched shows:</caption>
+                <li>The Witcher (Netflix)</li>
+                <li>Andor (Disney +)</li>
+                <li>The Terminal List (Prime Video)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
