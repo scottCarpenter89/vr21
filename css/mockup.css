@@ -14,6 +14,15 @@ label {
 
 input {
     background-color: #FFF;
+    color: #000;
+}
+
+div > label, input {
+    margin: 5px;
+}
+
+label {
+    align-content: right;
 }
 
 button {
@@ -28,7 +37,7 @@ button {
 }
 
 main {
-    padding: 100px;
+    padding: 50px;
 }
 
 footer {
