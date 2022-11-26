@@ -1,14 +1,105 @@
+:root {
+    --title-font: @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Titillium+Web:wght@600&display=swap');
+}
 
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav { 
+    background-color: #2E4052;
+    display: flex;
+}
+
+nav a { 
+    font-size: 28pt; 
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Rubik", sans-serif;
+    padding: 1em;
+    justify-content: flex-end;
+}
 
 #logo {
-    align-items: flex-start;
+    background-color: #2E4052;
+    display: inline-block;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 28pt;
+    padding: 1em;
+}
+
+#logo > a {
+    color: #FFF;
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+  
+    
 }
 
 ul > li {
     display: inline-block;
+   
+}
+
+main div {
+    padding: 2em;
+}
+
+#about {
+    height: 500px;
+}
+
+#projects {
+    background-color: #BDD9BF;
+    /* z-index: -1; */
+	height: 500px;
+	/* border-left: 50vw solid transparent;
+	border-right: 50vw solid transparent;
+	border-top: 100px solid #FFF; */ 
+}
+
+#projects-content {
+    /* position: absolute; */
+    /* bottom: 2%;
+    right: 55% */
+}
+
+#resume {
+    height: 500px;
+	/*border-left: 50vw solid transparent;
+	border-right: 50vw solid transparent;
+	border-top: 100px solid #BDD9BF; */
+}
+
+#resume-content {
+        /* position: absolute;
+        bottom: -60%;
+        left: 2% */
+}
+
+footer {
+    background-color: #2E4052;
+    color: #FFF;
+    height: 15vh;
 }
 
 .socials{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
+
