@@ -46,11 +46,6 @@ nav a {
     width: 100%;
 }
 
-ul {
-  
-    
-}
-
 ul > li {
     display: inline-block;
    
@@ -61,7 +56,14 @@ main div {
 }
 
 #about {
-    height: 500px;
+    display: flex;
+    height: fit-content;
+    
+    background: linear-gradient(to right,#10FFA8,#0013DA);
+}
+
+#about img {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 }
 
 #projects {
@@ -80,16 +82,21 @@ main div {
 }
 
 #resume {
-    height: 500px;
-	/*border-left: 50vw solid transparent;
-	border-right: 50vw solid transparent;
-	border-top: 100px solid #BDD9BF; */
+    height: fit-content;
+    width: 50%;
+    justify-content: center;
+    height: fit-content;
+  
 }
 
 #resume-content {
-        /* position: absolute;
-        bottom: -60%;
-        left: 2% */
+    display: flex;
+    
+}
+
+iframe {
+    /* height: 1100px;
+    width: 100%; */
 }
 
 footer {
