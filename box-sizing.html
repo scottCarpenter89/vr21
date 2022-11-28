@@ -7,22 +7,33 @@
     <title>Box-Sizing</title>
 
     <style> 
+
         .border-box {
             box-sizing: border-box;
+            width: 300px;
+            padding: 8px;
+            border: solid 10px black;
         }
 
         .content-box {
             box-sizing: content-box;
+            width: 300px;
+            padding: 8px;
+            border: solid 10px black;
+        }
+        
+        img {
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="border-box">
-
+        <img src="img/pikachu_sprite__pokmon_red_and_blue__by_shyguystudios_db4n132-fullview.jpg">
     </div>
 
     <div class="content-box">
-
+        <img src="img/raichu.jpg"> 
     </div>
 </body>
 </html>
