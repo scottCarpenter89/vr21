@@ -27,20 +27,20 @@ nav a {
     font-weight: 500;
     color: #FFF;
     text-decoration: none;
-    padding: 1em;
     justify-content: flex-end;
 }
 
+#top a {
+     padding: 1em;
+}
 #logo {
     display: flex;
     justify-content: flex-start;
-    font-weight: 500;
-    font-size: 28pt;
-    
 }
 
-#logo > a {
-    color: #FFF;
+#logo img {
+    max-height: 200px;
+    max-width: 200px;
 }
 
 #nav {
