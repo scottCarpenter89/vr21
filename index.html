@@ -20,7 +20,7 @@
             <li><a href="#about">about</a></li>
             <li><a href="#projects">projects</a></li>
             <li><a href="#resume">resume</a></li>
-            <li><a href="#bottom">contact</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </div>
 </nav>
@@ -30,10 +30,11 @@
 
     <main>
         <div id="about">
+
             <div id="about-content">
                 <h1>Hi I'm Scott.</h1>
                 <p>
-                    I am a software engineering apprentice at AWS. I still a little green behind the gills but
+                    I am a software engineering apprentice at AWS. I'm still a little green behind the gills but
                     I'm a very gritty person.
                     After I left the military service in 2018 I had no idea where I would land. I never thought that I
                     would end up in tech, but I am very
@@ -41,28 +42,37 @@
 
                 </p>
                 <p>
-                    Please browse around my page and feel free to contact me!
+                    Please browse around my page and feel free to <a href="#contact">contact me</a>!
                 </p>
             </div>
-            <img src="img/me2.png" />
-            <!-- <img src="img/me.png"/> -->
+
+            
+                <img src="img/me.jpg" />
+          
+
         </div>
 
         <div id="projects">
+            <div id="project-title">
+                <h2>
+                    Projects
+                </h2>
+            </div>
             <div id="projects-content">
-                <div>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis odit molestias quos ipsum aliquid
-                    magnam voluptas autem eaque impedit optio.
+                <div class="project">
+                    <h3><a href="https://github.com/Clear-to-Close/CleartoClose">Clear-to-Close</a></h3>
+                    This innovative proof of concept attempt to bridge communication gaps felt by the home buying process by automating listing updates and allows buyers to bid directly on homes anonymously.
                 </div>
 
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dignissimos. Iusto qui voluptatum
-                    corrupti consectetur eum omnis nulla ipsam error.
+                <div class="project">
+                    <h3><a href="https://github.com/scottCarpenter89/OpenMat">OpenMat</a></h3>
+                    This social-media/blogging application is designed to connect martial artists together to bring together sparring partners, find open gyms, and explore new disciplines.
+
                 </div>
 
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi adipisci voluptates unde in earum
-                    quia assumenda impedit blanditiis tempora at.
+                <div class="project">
+                    <h3><a href="https://github.com/scottCarpenter89/Weatherly">Weatherly</a></h3>
+                    This API uses geolocation to render a 5 day forecast of weather at a pinned location on an interactive map.
                 </div>
             </div>
         </div>
@@ -70,11 +80,11 @@
         <div id="resume">
 
             <div>
-                <p>
+                <h2>
                     Check out my resume below, or follow this
-                    <a
-                        href="https://docs.google.com/document/d/e/2PACX-1vQ6iQbVdnpQ_OHXT4RqXesumngYR44zqOkSQXtEhzIyquNB_JeImF2l-PpyPIbLUr6ZjuO2YdWs3Du6/pub">link</a>.
-                </p>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vQ6iQbVdnpQ_OHXT4RqXesumngYR44zqOkSQXtEhzIyquNB_JeImF2l-PpyPIbLUr6ZjuO2YdWs3Du6/pub"
+                        target="_blank">link</a>.
+                </h2>
             </div>
 
             <div id="resume-content">
@@ -86,27 +96,37 @@
         </div>
     </main>
     <footer>
-        <div>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/scottcarpenter89/" id="bottom">
-                        <img class="socials"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/scottCarpenter89">
-                        <img class="socials" src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
-                    </a>
-                </li>
-            </ul>
-            <div>
-                <a href="#top">
+        <div id="footer-content">
 
-                    Back to top
-
-                </a>
+            <div id="contact">
+                <h2>
+                    Scott Carpenter<br>
+                    carpenter.scott22@gmail.com
+                </h2>
             </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/scottcarpenter89/" target="_blank">
+                            <img class="socials" src="img/In-White-40.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/scottCarpenter89" target="_blank">
+                            <img class="socials" src="img/GitHub-Mark-Light-64px.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="copyright">
+            <p>
+                &#169; 2022 Scott Carpenter
+            </p>
+        </div>
 
         </div>
     </footer>
