@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,22 @@
         body {
             background-color: green;
         }
+
+        .resize {
+            background-color: #FFF;
+            height: 150px;
+            width: 150px;
+        }
+
         @media (min-width: 480px) {
             body {
                 background-color: red;
+            }
+
+            .resize {
+                background-color: #FFF;
+                height: 250px;
+                width: 250px;
             }
         }
 
@@ -19,11 +33,23 @@
             body {
                 background-color: purple;
             }
+
+            .resize {
+                background-color: #FFF;
+                height: 350px;
+                width: 350px;
+            }
         }
 
         @media (min-width: 992px) {
             body {
                 background-color: turquoise;
+            }
+
+            .resize {
+                background-color: #FFF;
+                height: 450px;
+                width: 450px;
             }
         }
 
@@ -31,10 +57,18 @@
             body {
                 background-color: black;
             }
+
+            .resize {
+                background-color: #FFF;
+                height: 550px;
+                width: 550px;
+            }
         }
     </style>
 </head>
+
 <body>
-    
+    <div class="resize"></div>
 </body>
+
 </html>
