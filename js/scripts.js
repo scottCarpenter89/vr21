@@ -31,3 +31,14 @@ const foundIndex = findIndexOf.indexOf('eggo');
 const doesInclude = findIndexOf.includes('creature');
 console.log(findIndexOf);
 console.log(`It\'s nice when software finds stuff for you. For instance, I can find the index of a word like \'eggo\' in the sentence above: ${foundIndex}, or find out if the word \'creature\' is included: ${doesInclude}`);
+
+let consoleCount = 8;
+function printConsoleLogs(num) {
+    let counter = 8; 
+    do {
+        console.log('console.log');
+        counter++;
+    } while (counter <= 30);
+}
+
+printConsoleLogs(consoleCount);
