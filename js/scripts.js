@@ -20,7 +20,7 @@ const isNaNweirdness = NaN === NaN;
 console.log(`It's a little weird that NaN === NaN turns out to be ${isNaNweirdness}`);
 
 const fortySeven = '47';
-let typeCoercion = fortySeven == numString;
+let typeCoercion = fortySeven == 47;
 console.log(`The string \'47\' should be equal to the number 47 without parsing the primitive, but it can be ${typeCoercion} when you use type coercion (which is bad).`);
 
 const exponents = 5**3;
@@ -42,3 +42,8 @@ function printConsoleLogs(num) {
 }
 
 printConsoleLogs(consoleCount);
+
+let sentence = "I have a good understanding of JavaScript.";
+console.log(sentence);
+let slicedSentence = sentence.slice(8,27);
+console.log(slicedSentence);
