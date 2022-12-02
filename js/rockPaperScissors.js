@@ -16,6 +16,7 @@ function RPS() {
         if (userChoice === 'rock' && machinePaper) {
             alert(`You chose ${userChoice} and I chose paper. I win!`);
             machineWins++;
+
             let playAgain = prompt(`Do you want to play again? (Y|N)`);
             if (playAgain.toUpperCase() === 'N' ) {
                  stopGame = true;
@@ -81,6 +82,17 @@ const scoreboard = () => {
     alert(`Okay, the score is\n
                             You: ${userWins}\n
                             Me: ${machineWins}`);
+}
+
+const playAgain = () => {
+    let decision = false;
+    prompt(`Do you want to play again? (Y|N)`);
+         if (playAgain.toUpperCase() === 'N' ) {
+           decision = true;
+        } else {
+            scoreboard();
+        }
+    return decision;
 }
 
 RPS();
