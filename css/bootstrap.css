@@ -10,3 +10,20 @@ body {
 .card {
     background-color: #d50404;
 }
+
+.card-content {
+    margin: 8px 8px 8px 0;
+}
+
+.img-container {
+    background-color: #dcdcdc !important;
+    border-radius: 5px;
+}
+
+.card-title, .card-text, .stats {
+    color: #FFF;
+}
+
+.height-title, .weight-title, .type-title {
+    font-weight: 500;
+}
