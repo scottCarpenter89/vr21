@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<body>
+    <div onclick="alert('Outer layer was alerted.')">
+        Outer Layer
+        <div onclick="alert('Middle layer was alerted.', event.stopPropagation())">
+                Middle Layer
+            <div class="inner-div">
+                Inner Layer
+              </div>
+        </div>
+    </div>
+   <script>
+    document.querySelector('.inner-div').addEventListener('click', (e) => {
+        e.preventDefault;
+        alert('I am zee inner div');
+        event.stopPropagation();
+
+    })
+   </script> 
+</body>
+</html>
