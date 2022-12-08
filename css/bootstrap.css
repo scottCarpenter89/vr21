@@ -5,11 +5,12 @@ nav {
 
 body {
     background-color: #242424;
-    color: #FFF;
+    
 }
 
 .card {
     background-color: #d50404;
+    color: #FFF;
 }
 
 .card-content {
