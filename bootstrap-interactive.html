@@ -792,7 +792,7 @@
                         </div>
                     </div>`;
                   
-            window.localStorage.setItem("pokemon", JSON.stringify(pokemon));
+            window.localStorage.setItem(`pokemon${number}`, JSON.stringify(pokemon));
             document.querySelector('.row').insertAdjacentHTML("beforeend", newCard);
         });
     </script>
