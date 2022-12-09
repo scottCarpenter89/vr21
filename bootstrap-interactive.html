@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>My Pokedex</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -511,16 +511,23 @@
                 <div class="modal-body">
                     <form>
                         <!-- Name Field -->
-                        <label for="name" class="form-label">Name</label>
+                        <label for="pokemonName" class="form-label">Name</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Charizard" aria-label="name"
-                                aria-describedby="name">
+                            <input id="pokemonName" type="text" class="form-control" placeholder="Charizard"
+                                aria-label="name" aria-describedby="name">
+                        </div>
+
+
+                        <!-- Number ID -->
+                        <label for="pokemonNumber" class="form-label">Number</label>
+                        <div class="input-group mb-3">
+                            <input id="pokemonNumber" type="text" class="form-control" placeholder="70"
+                                aria-label="number" aria-describedby="number">
                         </div>
 
                         <!-- Checkboxes -->
-                        <label for="Type" class="form-label">Select Type(s)</label>
-
-                        <div class="row m-3">
+                        <label for="pokemonType" class="form-label">Select Type(s)</label>
+                        <div id="pokemonType" class="row m-3">
                             <div class="col-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="normal-type">
@@ -655,32 +662,35 @@
                         </div>
 
                         <!-- Height Field -->
-                        <label for="feet" class="form-label">Height</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Feet" aria-label="feet"
-                                aria-describedby="feet">
+                        <label for="height" class="form-label">Height</label>
+                        <div id="height">
+                            <div class="input-group mb-3">
+                                <input type="text" id="pokemonFeet" class="form-control" placeholder="Feet"
+                                    aria-label="feet" aria-describedby="feet">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="text" id="pokemonInches" class="form-control" placeholder="Inches"
+                                    aria-label="inches" aria-describedby="Inches">
+                            </div>
                         </div>
 
+                        <label for="pokemonWeight" class="form-label">Weight (lbs)</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Inches" aria-label="inches"
-                                aria-describedby="Inches">
+                            <input type="text" id="pokemonWeight" class="form-control" placeholder="200"
+                                aria-label="name" aria-describedby="name">
                         </div>
 
-                        <label for="name" class="form-label">Weight (lbs)</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="200" aria-label="name"
-                                aria-describedby="name">
-                        </div>
-
-                        <label for="description" class="form-label">Description</label>
+                        <label for="pokemonDescription" class="form-label">Description</label>
                         <div class="input-group">
-                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <textarea id="pokemonDescription" class="form-control"
+                                aria-label="With textarea"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="saveNewPokemon" class="btn btn-danger">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="saveNewPokemon" class="btn btn-danger" data-bs-dismiss="modal">Save changes</button>
                 </div>
             </div>
         </div>
@@ -695,30 +705,36 @@
         </script>
 
     <script>
-        document.querySelector('#addBtn').addEventListener('click', (e) => {
-            // const div = document.createElement('div');
+        document.querySelector('#saveNewPokemon').addEventListener('click', (e) => {
+            let name = document.querySelector('#pokemonName').value;
+            let number = document.querySelector('#pokemonNumber').value;
+            let feet = document.querySelector('#pokemonFeet').value;
+            let inches = document.querySelector('#pokemonInches').value;
+            let weight = document.querySelector('#pokemonWeight').value;
+            let desciption = document.querySelector('#pokemonDescription').value;
 
             const newCard = `<!-- New Pokemon -->
                     <div class="col-md-6 col-lg-3 col-xxl-2 d-flex justify-content-center">
                         <div class="card container-fluid mb-4" style="width: 18rem;">
                             <div class="pokemon-name-number d-flex justify-content-between mt-2">
-                                <h4 class="card-title">Ivysaur</h4>
-                                <h4 class="card-title">#002</h4>
+                                <h4 class="card-title">${name}</h4>
+                                <h4 class="card-title">#${number}</h4>
                             </div>
                             <div class="img-container">
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
-                                    class="card-img-top" alt="...">
+                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${number}.png"
+                                    class="card-img-top" alt="Photo of ${name}">
                             </div>
                             <div class="card-content">
-                                <p class="card-text">There is a plant seed on its back right from the day this Pokémon
-                                    is born. The seed slowly grows larger.</p>
+                                <p class="card-text">
+                                    ${desciption}
+                                </p>
                                 <div class="stats mb-3">
                                     <div class="height d-flex">
                                         <div class="height-title me-2">
                                             Height:
                                         </div>
                                         <div class="height-content">
-                                            3' 03"
+                                            ${feet}' ${inches}"
                                         </div>
                                     </div>
                                     <div class="weight d-flex">
@@ -726,7 +742,7 @@
                                             Weight:
                                         </div>
                                         <div class="weight-content">
-                                            28.7 lbs
+                                            ${weight} lbs
                                         </div>
                                     </div>
                                     <div class="type d-flex">
@@ -745,8 +761,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-`;
+                    </div>`;    
             document.querySelector('.row').insertAdjacentHTML("beforeend", newCard);
         });
     </script>
