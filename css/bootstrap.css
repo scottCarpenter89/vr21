@@ -26,6 +26,6 @@ body {
     color: #FFF;
 }
 
-.height-title, .weight-title, .type-title {
+.height-title, .weight-title, .type-title, label {
     font-weight: 500;
 }
