@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "jasmine": "^4.5.0"
+  },
+  "name": "testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "concat-map": "^0.0.1",
+    "balanced-match": "^1.0.2",
+    "brace-expansion": "^1.1.11",
+    "glob": "^7.2.3",
+    "fs.realpath": "^1.0.0",
+    "inherits": "^2.0.4",
+    "inflight": "^1.0.6",
+    "jasmine-core": "^4.5.0",
+    "once": "^1.4.0",
+    "minimatch": "^3.1.2",
+    "path-is-absolute": "^1.0.1",
+    "wrappy": "^1.0.2"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
