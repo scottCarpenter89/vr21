@@ -31,7 +31,7 @@ document.querySelector('#saveNewPokemon').addEventListener('click', (e) => {
         weight: `${weight}`,
         type: `${typeString}`
     }
-    
+
     const newCard = `<!-- New Pokemon -->
             <div id="${pokemonName}-card" class="col-md-6 col-lg-3 col-xxl-2">
                 <div class="card container mb-4" style="width: 18rem;">
@@ -82,13 +82,13 @@ document.querySelector('#saveNewPokemon').addEventListener('click', (e) => {
                     </div>
 
                     <div class="container mb-3 d-flex justify-content-end">
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            <button id="update-${pokemonName} type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#updateModal">Update</button>
                             <button id="release-${pokemonName}" class="release btn btn-success ms-2">Release</button>
                         </div>
                 </div>
             </div>`;
-          
+
     window.localStorage.setItem(`pokemon${number}`, JSON.stringify(pokemon));
     document.querySelector('.row').insertAdjacentHTML("beforeend", newCard);
     document.querySelector('#addPokemonForm').reset();
@@ -97,13 +97,13 @@ document.querySelector('#saveNewPokemon').addEventListener('click', (e) => {
 // takes data from local storage and puts it into an array
 document.addEventListener('DOMContentLoaded', event => {
     event.preventDefault();
-   
+
 
     for (let i = 0; i < localStorage.length; i++) {
         pokemonArray.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-      }
+    }
 
-      pokemonArray.forEach(pokemon => {
+    pokemonArray.forEach(pokemon => {
         const card = `<!-- New Pokemon -->
         <div id="${pokemon.name}-card" class="col-md-6 col-lg-3 col-xxl-2">
             <div class="card container mb-4" style="width: 18rem;">
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', event => {
                 </div>
 
                 <div class="container mb-3 d-flex justify-content-end">
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                        <button id="update-${pokemon.name}" type="button" class="btn btn-warning" data-bs-toggle="modal"
                             data-bs-target="#updateModal">Update</button>
                         <button id="release-${pokemon.name}" class="release btn btn-success ms-2">Release</button>
                     </div>
@@ -162,21 +162,54 @@ document.addEventListener('DOMContentLoaded', event => {
         </div>`;
 
         document.querySelector('.row').insertAdjacentHTML("beforeend", card);
+
         document.querySelector(`#release-${pokemon.name}`).addEventListener('click', e => {
             e.preventDefault();
-            console.log(this.toString + 'release button has been triggered!');
+
             let releasePokemon = document.querySelector(`#${pokemon.name}-card`);
             releasePokemon.remove();
             localStorage.removeItem(`pokemon${pokemon.number}`);
-        })
-      });
+        });
+
+        document.querySelector(`#update-${pokemon.name}`).addEventListener('click', e => {
+            e.preventDefault();
+            let data = JSON.parse(localStorage.getItem(`pokemon${pokemon.number}`));
+
+            let form = document.getElementById("updatePokemonForm");
+            let inputs = form.getElementsByClassName("form-check-input");
+            let typeArray = [];
+
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].type === "checkbox" && inputs[i].checked) {
+                    typeArray.push(inputs[i].value);
+                }
+            }
+            let types = typeArray.join(', ');
+            document.querySelector('#update-pokemon-name').setAttribute('value', `${data.name}`);
+            document.querySelector('#update-pokemon-number').setAttribute('value', `${data.number}`);
+            document.querySelector('#update-pokemon-feet').setAttribute('value', `${data.feet}`);
+            document.querySelector('#update-pokemon-inches').setAttribute('value', `${data.inches}`);
+            document.querySelector('#update-pokemon-weight').setAttribute('value', `${data.weight}`);
+            document.querySelector('#update-pokemon-description').innerText = `${data.description}`;
+
+
+            document.querySelector('#updatePokemonForm').innerHTML = updateCard;
+            const updatePokemon = {
+                name: .value,
+                number: .value,
+                description: document.querySelector('#update-pokemon-description').value,
+                feet: document.querySelector('#update-pokemon-feet').value,
+                inches: document.querySelector('#update-pokemon-inches').value,
+                weight: document.querySelector('#update-pokemon-weight').value,
+                type: types
+            }
+            
+            let localKey = localStorage.getItem(`pokemon${data.number}`);
+             localKey = localStorage.setItem(`pokemon${data.number}`, JSON.stringify(updatePokemon));
+         
+        });
+
+
+
+    });
 });
-
-
-// let releaseButtons = document.getElementsByClassName('release btn btn-success ms-2');
-// console.log(releaseButtons);
-// Array.from(releaseButtons).forEach(button => {
-//     button.addEventListener('click', e => {
-//         console.log('release button was clicked.');
-//     })
-// }) 
