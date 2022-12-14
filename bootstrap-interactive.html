@@ -706,7 +706,181 @@
                 </div>
                 <div class="modal-body">
                     <form id="updatePokemonForm">
-                       
+                        <!-- Name Field -->
+                        <label for="update-pokemon-name" class="form-label">Name</label>
+                        <div class="input-group mb-3">
+                            <input id="update-pokemon-name" type="text" class="form-control" aria-label="name"
+                                aria-describedby="name">
+                        </div>
+
+                        <!-- Number ID -->
+                        <label for="update-pokemon-number" class="form-label">Number</label>
+                        <div class="input-group mb-3">
+                            <input id="update-pokemon-number" type="text" class="form-control" aria-label="number"
+                                aria-describedby="number">
+                        </div>
+
+                        <!-- Checkboxes -->
+                        <label for="update-pokemon-type" class="form-label">Select Type(s)</label>
+                        <div id="update-pokemon-type" class="row m-3">
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Normal" id="normal-type">
+                                    <label class="form-check-label" for="normal-type">
+                                        Normal
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Fire" id="fire-type">
+                                    <label class="form-check-label" for="fire-type">
+                                        Fire
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Water" id="water-type">
+                                    <label class="form-check-label" for="water-type">
+                                        Water
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Grass" id="grass-type">
+                                    <label class="form-check-label" for="grass-type">
+                                        Grass
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Electric" id="electric-type">
+                                    <label class="form-check-label" for="electric-type">
+                                        Electric
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Ice" id="ice-type">
+                                    <label class="form-check-label" for="ice-type">
+                                        Ice
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Fighting" id="fighting-type">
+                                    <label class="form-check-label" for="fighting-type">
+                                        Fighting
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Poison" id="poison-type">
+                                    <label class="form-check-label" for="poison-type">
+                                        Poison
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Ground" id="ground-type">
+                                    <label class="form-check-label" for="ground-type">
+                                        Ground
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Flying" id="flying-type">
+                                    <label class="form-check-label" for="flying-type">
+                                        Flying
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Psychic" id="psychic-type">
+                                    <label class="form-check-label" for="psychic-type">
+                                        Psychic
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Bug" id="bug-type">
+                                    <label class="form-check-label" for="bug-type">
+                                        Bug
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Rock" id="rock-type">
+                                    <label class="form-check-label" for="rock-type">
+                                        Rock
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Ghost" id="ghost-type">
+                                    <label class="form-check-label" for="ghost-type">
+                                        Ghost
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Dark" id="dark-type">
+                                    <label class="form-check-label" for="dark-type">
+                                        Dark
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Dragon" id="dragon-type">
+                                    <label class="form-check-label" for="dragon-type">
+                                        Dragon
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Steel" id="steel-type">
+                                    <label class="form-check-label" for="steel-type">
+                                        Steel
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Fairy" id="fairy-type">
+                                    <label class="form-check-label" for="fairy-type">
+                                        Fairy
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Height Field -->
+                        <label for="update-height" class="form-label">Height</label>
+                        <div id="update-height">
+                            <div class="input-group mb-3">
+                                <input type="text" id="update-pokemon-feet" class="form-control" aria-label="feet"
+                                    aria-describedby="feet">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="text" id="update-pokemon-inches" class="form-control" aria-label="inches"
+                                    aria-describedby="Inches">
+                            </div>
+                        </div>
+
+                        <label for="update-pokemon-weight" class="form-label">Weight (lbs)</label>
+                        <div class="input-group mb-3">
+                            <input type="text" id="update-pokemon-weight" class="form-control" aria-label="name"
+                                aria-describedby="name">
+                        </div>
+
+                        <label for="update-pokemon-description" class="form-label">Description</label>
+                        <div class="input-group">
+                            <textarea id="update-pokemon-description" class="form-control"
+                                aria-label="With textarea"></textarea>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

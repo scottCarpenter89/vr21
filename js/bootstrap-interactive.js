@@ -192,18 +192,6 @@ document.addEventListener('DOMContentLoaded', event => {
             document.querySelector('#update-pokemon-weight').setAttribute('value', `${data.weight}`);
             document.querySelector('#update-pokemon-description').innerText = `${data.description}`;
 
-
-            document.querySelector('#updatePokemonForm').innerHTML = updateCard;
-            const updatePokemon = {
-                name: .value,
-                number: .value,
-                description: document.querySelector('#update-pokemon-description').value,
-                feet: document.querySelector('#update-pokemon-feet').value,
-                inches: document.querySelector('#update-pokemon-inches').value,
-                weight: document.querySelector('#update-pokemon-weight').value,
-                type: types
-            }
-            
             let localKey = localStorage.getItem(`pokemon${data.number}`);
              localKey = localStorage.setItem(`pokemon${data.number}`, JSON.stringify(updatePokemon));
          
